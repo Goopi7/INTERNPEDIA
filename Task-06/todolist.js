@@ -6,7 +6,7 @@
         {
             const todotask= listelements[i];
             const html =`<p class="task">${todotask} <button onclick="
-                listelements.splice(${i},1);render();" class="deletebtn"><img src="/images/delete.png"></button></p>`;
+                listelements.splice(${i},1);render();" class="deletebtn"><img src="/delete.png"></button></p>`;
             task +=html;
         }
         document.querySelector(".listoftodo").innerHTML = task;
