@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="temperature.css">
+</head>
+<body>
+    <div class="main">
+        <div class="upper">
+            <div>
+                    <p class="heading">Degrees</p>
+                <input id="input-text" type="text"/>
+            </div>
+            <div class="upper-2">
+                <p class="heading">Type</p>
+                <select id="types" >
+                    <option value="1" selected >Fahrenheit</option>
+                    <option value="2">Celsius</option>
+                </select>
+                <button id="js-convert-btn">Convert</button>           
+            </div>
+        </div>
+        <div class="lower">
+            <p class="heading">Result</p>
+            <p id="js-result" ></p>
+        </div>
+    </div>
+    <script>
+            document.getElementById("js-convert-btn").addEventListener("click", function() {
+        var typeofdegree = document.getElementById("types").value;
+        var val = document.querySelector("#input-text").value;
+
+        if(typeofdegree == 1){
+            let formula= (val-32)*5/9;
+            document.querySelector("#js-result").innerHTML =formula.toFixed(4) + "\u00B0C";
+        }
+        else{
+            
+            let formula= (val * 9 / 5) + 32;;
+            document.querySelector("#js-result").innerHTML =formula.toFixed(4) +"\u00B0F";
+        }
+        
+    });
+    </script>
+</body>
+</html>
