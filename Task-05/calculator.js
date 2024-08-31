@@ -12,7 +12,7 @@ let inputfiled;
             if(type == 'div'){
                 inputfiled.value +=`/`;
             }
-            if(type == 'point'){
+            else if(type == 'point'){
                 inputfiled.value +=`.`;
             }
             else  if(type == 'mul'){
